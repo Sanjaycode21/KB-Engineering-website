@@ -15,7 +15,7 @@
   letter-spacing: 0.16em;
 }
 .collection-hero {
-  background: #f7f8f8;
+  background: var(--surface);
   padding: 34px 0 0;
   overflow: clip;
 }
@@ -71,8 +71,8 @@
 .collection-hero-line {
   display: block;
   overflow: hidden;
-  padding-bottom: 9px;
-  margin-bottom: -9px;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 .collection-hero-line > span {
   display: block;
@@ -428,7 +428,7 @@
 }
 .product-directory {
   padding: 95px 0 100px;
-  background: #fff;
+  background: var(--surface);
   scroll-margin-top: 100px;
 }
 .directory-intro {
@@ -535,7 +535,7 @@
   color: #a47e2b;
 }
 .collection-inquiry {
-  background: #f4f6f6;
+  background: var(--light);
   padding: 70px 0 76px;
   border-top: 1px solid #e0e5e7;
 }

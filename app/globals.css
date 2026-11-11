@@ -8,10 +8,14 @@
   --dark: #031b33;
   --gold: #c99528;
   --text: #263746;
-  --light: #f7f9fb;
+  --surface: #f5f3ee;
+  --light: #eef1f3;
 }
 * {
   box-sizing: border-box;
+}
+main {
+  background: var(--surface);
 }
 html {
   scroll-behavior: smooth;
@@ -626,7 +630,7 @@ p {
   stroke-width: 1;
 }
 .contact-cta {
-  background: #f4f6f8;
+  background: var(--light);
   padding: 58px 0;
 }
 .contact-cta > .container {
@@ -792,6 +796,7 @@ footer {
 }
 .service-detail {
   padding: 65px 0;
+  background: var(--surface);
   border-bottom: 1px solid #dce2e8;
   scroll-margin-top: 100px;
 }
@@ -818,7 +823,7 @@ footer {
 .equipment-list li {
   padding: 18px;
   border: 1px solid #dfe5eb;
-  background: #f7f9fb;
+  background: var(--light);
   font-size: 14px;
   display: flex;
   gap: 10px;
@@ -1655,7 +1660,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 48px 0;
-  background: #f7f9fb;
+  background: var(--light);
 }
 .section-divider-line {
   display: block;
