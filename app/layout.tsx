@@ -18,6 +18,7 @@ const manrope = localFont({
   variable: "--font-manrope",
 });
 import { Header, Footer } from "@/components/site";
+import RouteScroll from "@/components/route-scroll";
 export const metadata: Metadata = {
   title: {
     default: "K B Engineering | Engineering, Procurement & Fabrication",
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={manrope.variable}>
       <body>
+        <RouteScroll />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
