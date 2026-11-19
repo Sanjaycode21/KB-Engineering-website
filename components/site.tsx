@@ -36,24 +36,6 @@ export function Header() {
   return (
     <header className="header">
       <div className="container nav">
-        <Link href="/" aria-label="K B Engineering home" className="logo">
-          <Image
-            className="logo-symbol"
-            src="/images/logo-symbol.png"
-            alt=""
-            width={2108}
-            height={710}
-            priority
-          />
-          <Image
-            className="logo-wordmark"
-            src="/images/logo-wordmark.png"
-            alt="K B Engineering"
-            width={2145}
-            height={248}
-            priority
-          />
-        </Link>
         <nav
           aria-label="Main navigation"
           className={open ? "navigation open" : "navigation"}

@@ -91,26 +91,8 @@ p {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   min-height: 105px;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex: 0 1 500px;
-  min-width: 0;
-}
-.logo img {
-  display: block;
-  height: auto;
-  object-fit: contain;
-}
-.logo-symbol {
-  width: min(30%, 145px);
-}
-.logo-wordmark {
-  width: min(68%, 340px);
 }
 .navigation {
   display: flex;
@@ -1028,16 +1010,6 @@ footer {
   }
   .nav {
     min-height: 84px;
-  }
-  .logo {
-    gap: 8px;
-    flex: 0 1 285px;
-  }
-  .logo-symbol {
-    width: 34%;
-  }
-  .logo-wordmark {
-    width: 63%;
   }
   .menu-toggle {
     display: block;
