@@ -11,7 +11,7 @@ export default function Contact() {
       <PageMotion pageKey="contact" />
       <PageIntro
         eyebrow="CONTACT US"
-        title="Let’s discuss your next project."
+        title="Let’s discuss our next project."
         description="Connect with K B Engineering to discuss your engineering, procurement and fabrication requirements."
       />
       <section className="container content-section contact-layout">
@@ -52,6 +52,7 @@ export default function Contact() {
             <div>
               <strong>Working hours</strong>
               <p>9:00 AM – 6:00 PM</p>
+              <p>Sunday: Holiday</p>
             </div>
           </div>
           <div className="contact-item">

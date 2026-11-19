@@ -10,7 +10,7 @@ export default function Services() {
       <ServicesMotion variant="page" />
       <PageIntro
         eyebrow="OUR SERVICES"
-        title="A complete EPF solution."
+        title="A complete EPC Solution."
         description="Engineering, procurement and fabrication services connected around your industrial requirements."
       />
       {services.map((s, i) => (

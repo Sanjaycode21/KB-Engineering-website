@@ -12,7 +12,7 @@ import {
   MapPin,
   ArrowUpRight,
 } from "lucide-react";
-import { company, products } from "@/lib/data";
+import { company, industrialCategories } from "@/lib/data";
 export function Button({
   href,
   children,
@@ -38,10 +38,19 @@ export function Header() {
       <div className="container nav">
         <Link href="/" aria-label="K B Engineering home" className="logo">
           <Image
-            src="/images/logo-original.jpeg"
-            alt="K B Engineering Enterprises Private Limited"
-            width={208}
-            height={104}
+            className="logo-symbol"
+            src="/images/logo-symbol.png"
+            alt=""
+            width={2108}
+            height={710}
+            priority
+          />
+          <Image
+            className="logo-wordmark"
+            src="/images/logo-wordmark.png"
+            alt="K B Engineering"
+            width={2145}
+            height={248}
             priority
           />
         </Link>
@@ -81,14 +90,6 @@ export function Footer() {
     <footer>
       <div className="container footer-grid">
         <div>
-          <Link href="/" className="footer-logo">
-            <Image
-              src="/images/logo-original.jpeg"
-              alt={company.name}
-              width={220}
-              height={110}
-            />
-          </Link>
           <p>
             Engineering, procurement and fabrication.
             <br />
@@ -105,8 +106,8 @@ export function Footer() {
         </div>
         <div>
           <h3>Our products</h3>
-          {products.map((x) => (
-            <Link key={x.slug} href={`/products/${x.slug}`}>
+          {industrialCategories.map((x) => (
+            <Link key={x.slug} href={x.href}>
               {x.name}
             </Link>
           ))}
@@ -135,7 +136,7 @@ export function Footer() {
         <span>
           © {new Date().getFullYear()} {company.name}
         </span>
-        <span>Industrial photographs are illustrative stock imagery.</span>
+        <span>Industrial imagery includes client-supplied, stock and generated images.</span>
       </div>
     </footer>
   );
@@ -143,18 +144,23 @@ export function Footer() {
 export function ProductGrid() {
   return (
     <div className="product-grid">
-      {products.map((p, i) => (
+      {industrialCategories.map((p, i) => (
         <Link
           className={`product-card product-${i}`}
-          href={`/products/${p.slug}`}
+          href={p.href}
           key={p.slug}
         >
           <Image
             src={`/images/${p.image}.jpg`}
             alt={p.imageAlt}
-            style={{ objectPosition: "center" }}
+            style={{
+              objectPosition: "center",
+              // Keep the supplied piping image's caption strip below the card.
+              scale: p.slug === "piping" ? 1.25 : 1,
+              transformOrigin: "center top",
+            }}
             fill
-            sizes="(max-width:600px) 90vw, (max-width:1000px) 45vw, 20vw"
+            sizes="(max-width:600px) 90vw, (max-width:800px) 45vw, 33vw"
           />
           <div>
             <h3>{p.name}</h3>
@@ -174,7 +180,7 @@ export function PageIntro({
 }: {
   eyebrow: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
 }) {
   return (
     <section className="page-intro">
@@ -194,7 +200,7 @@ export function ContactCTA() {
         <div>
           <p className="eyebrow">YOUR NEXT PROJECT STARTS HERE</p>
           <h2>
-            Let’s discuss your
+            Let’s discuss our
             <br />
             next project.
           </h2>

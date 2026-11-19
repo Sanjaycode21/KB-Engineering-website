@@ -11,8 +11,8 @@ export const products = [
   {
     slug: "skid-mounted-packages",
     name: "Skid Mounted Packages",
-    image: "plant",
-    imageAlt: "Illustrative stainless steel pumping and pipework assembly",
+    image: "skid-mounted-packages",
+    imageAlt: "Illustration of a skid-mounted process package with pumps, vessel and pipework",
     description:
       "Integrated packages arranged around your process requirements.",
     items: [
@@ -27,14 +27,6 @@ export const products = [
       "Water Treatment Skids",
       "Deluge Skids",
     ],
-  },
-  {
-    slug: "process-equipment",
-    name: "Process Equipment",
-    image: "process-tanks",
-    imageAlt: "Illustrative stainless steel process tanks and connected piping",
-    description: "Equipment for industrial process and thermal applications.",
-    items: ["Pressure Vessels", "Boilers", "Heat Exchangers", "Evaporators"],
   },
   {
     slug: "well-testing-units",
@@ -55,6 +47,23 @@ export const products = [
     ],
   },
   {
+    slug: "sludge-treatment-plant",
+    name: "Sludge Treatment Plant",
+    image: "sludge-treatment-plant",
+    imageAlt: "Illustration of a sludge treatment plant with thickener basin and dewatering equipment",
+    description:
+      "Discuss your sludge treatment plant equipment and fabrication requirements with our team.",
+    items: [],
+  },
+  {
+    slug: "process-equipment",
+    name: "Process Equipment",
+    image: "client-process-equipment",
+    imageAlt: "Industrial process columns, vessels, piping and access platforms",
+    description: "Equipment for industrial process and thermal applications.",
+    items: ["Pressure Vessels", "Boilers", "Heat Exchangers", "Evaporators"],
+  },
+  {
     slug: "power-plant-equipment",
     name: "Power Plant Equipment",
     image: "power",
@@ -69,14 +78,49 @@ export const products = [
       "Inlet and Exhaust Systems",
     ],
   },
+];
+export const industrialCategories = [
   {
-    slug: "sludge-treatment-plant",
-    name: "Sludge Treatment Plant",
-    image: "water",
-    imageAlt: "Illustrative aerial view of a wastewater treatment clarifier",
-    description:
-      "Discuss your sludge treatment plant equipment and fabrication requirements with our team.",
-    items: [],
+    slug: "pressure-vessels",
+    name: "PRESSURE VESSELS",
+    href: "/products/process-equipment",
+    image: "client-pressure-vessels",
+    imageAlt: "Horizontal cylindrical pressure vessel with flanged connections",
+  },
+  {
+    slug: "heat-exchangers",
+    name: "HEAT EXCHANGERS",
+    href: "/products/process-equipment",
+    image: "client-heat-exchangers",
+    imageAlt: "Shell-and-tube heat exchanger with exposed tube openings",
+  },
+  {
+    slug: "piping",
+    name: "PIPING",
+    href: "/products/power-plant-equipment",
+    image: "client-piping",
+    imageAlt: "Industrial piping with valves, flanges and connected process equipment",
+  },
+  {
+    slug: "process-equipments",
+    name: "PROCESS EQUIPMENTS",
+    href: "/products/process-equipment",
+    image: "client-process-equipment",
+    imageAlt: "Industrial process columns, vessels, piping and access platforms",
+  },
+  {
+    slug: "power-plant-inlet-exhaust-duct-systems",
+    name: "POWER PLANT INLET & EXHAUST DUCT SYSTEMS",
+    href: "/products/power-plant-equipment",
+    image: "client-power-plant-duct-systems",
+    imageAlt: "Large industrial ductwork and an exhaust stack at a power plant",
+  },
+  {
+    slug: "heavy-structures",
+    name: "HEAVY STRUCTURES",
+    href: "/services",
+    image: "client-heavy-structures",
+    imageAlt: "Structural steel building frame with columns, beams and bracing",
   },
 ];
 export const services = [
@@ -100,7 +144,7 @@ export const services = [
   {
     name: "Fabrication",
     description:
-      "Manufacturing and assembling industrial equipment and structures.",
+      "Manufacturing and assembling industrial equipment and heavy structures.",
     detail:
       "Fabrication and assembly for industrial equipment and packages, developed around the agreed engineering scope and project requirements.",
     image: "fabrication",

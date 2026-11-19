@@ -10,14 +10,20 @@ export default function About() {
       <PageIntro
         eyebrow="ABOUT K B ENGINEERING"
         title="Engineering with a connected approach."
-        description="Specialized in Engineering, Procurement and Fabrication. Based in Ranipet, Tamil Nadu."
+        description={
+          <>
+            Specialized in Engineering, Procurement and Fabrication.
+            <br />
+            Tamil Nadu, India.
+          </>
+        }
       />
       <section className="content-section container">
         <div className="two-column">
           <div className="content-image">
             <Image
-              src="/images/welding.jpg"
-              alt="Illustrative industrial metal fabrication"
+              src="/images/client-pressure-vessels.jpg"
+              alt="Horizontal cylindrical pressure vessel with flanged connections"
               fill
               sizes="(max-width:800px) 100vw, 50vw"
             />

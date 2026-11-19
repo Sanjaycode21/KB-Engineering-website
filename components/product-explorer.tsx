@@ -11,10 +11,10 @@ import { products } from "@/lib/data";
 const number = (index: number) => String(index + 1).padStart(2, "0");
 const annotations = [
   "INTEGRATED PACKAGES",
-  "PROCESS & THERMAL APPLICATIONS",
   "WELL TESTING EQUIPMENT",
-  "POWER GENERATION SYSTEMS",
   "TREATMENT APPLICATIONS",
+  "PROCESS & THERMAL APPLICATIONS",
+  "POWER GENERATION SYSTEMS",
 ];
 
 export default function ProductExplorer() {
@@ -236,7 +236,7 @@ export default function ProductExplorer() {
                     : "Discuss your treatment requirements"}
                 </p>
               </div>
-              <figure className={`explorer-visual explorer-photo-${i}`}>
+              <figure className={`explorer-visual explorer-photo-${product.slug}`}>
                 <Image
                   src={`/images/${product.image}.jpg`}
                   alt={product.imageAlt}

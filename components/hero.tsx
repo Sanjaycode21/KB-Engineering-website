@@ -9,9 +9,10 @@ import EngineeringGeometry from "@/components/engineering-geometry";
 
 const slides = [
   {
-    image: "refinery",
-    alt: "Illustrative oil refinery and industrial process structures",
-    position: "65% 53%",
+    image: "client-pressure-vessels",
+    alt: "Horizontal cylindrical pressure vessel with flanged connections",
+    position: "65% 50%",
+    scale: 1,
     eyebrow: "ENGINEERING / PROCUREMENT / FABRICATION",
     title: ["Integrated", "Engineering", "& Fabrication", "Solutions."],
     description:
@@ -21,9 +22,10 @@ const slides = [
     caption: "CONNECTED INDUSTRIAL SOLUTIONS",
   },
   {
-    image: "hero-process",
-    alt: "Illustrative industrial boiler, cylindrical equipment and connected pipework",
-    position: "70% 50%",
+    image: "client-heat-exchangers",
+    alt: "Shell-and-tube heat exchanger with exposed tube openings",
+    position: "60% 50%",
+    scale: 1,
     eyebrow: "INDUSTRIAL EQUIPMENT / PROCESS SYSTEMS",
     title: ["Industrial", "Equipment", "& Process", "Systems."],
     description:
@@ -33,9 +35,10 @@ const slides = [
     caption: "EQUIPMENT FOR YOUR APPLICATION",
   },
   {
-    image: "hero-fabrication",
-    alt: "Illustrative welder in protective equipment fabricating metal profiles in a workshop",
-    position: "70% 45%",
+    image: "client-piping",
+    alt: "Industrial piping with valves, flanges and connected process equipment",
+    position: "60% 50%",
+    scale: 1.25,
     eyebrow: "FABRICATION / MANUFACTURING / ASSEMBLY",
     title: ["Precision", "Fabrication", "& Package", "Assembly."],
     description:
@@ -47,7 +50,7 @@ const slides = [
 ];
 
 export default function Hero() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
   const [focused, setFocused] = useState(false);
   const [visible, setVisible] = useState(true);
   const [motionAllowed, setMotionAllowed] = useState(false);
@@ -117,7 +120,13 @@ export default function Hero() {
               sizes="100vw"
               priority={i === 0}
               loading={i === 0 ? undefined : "eager"}
-              style={{ objectFit: "cover", objectPosition: s.position }}
+              style={{
+                objectFit: "cover",
+                objectPosition: s.position,
+                // Keep the piping photo's printed caption outside the banner.
+                scale: s.scale,
+                transformOrigin: "center top",
+              }}
             />
           </div>
         ))}

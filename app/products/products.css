@@ -163,6 +163,14 @@
   color: white;
   scroll-margin-top: 105px;
 }
+.industrial-categories {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  scroll-margin-top: 105px;
+}
+.industrial-categories h2 {
+  margin-bottom: 32px;
+}
 .explorer-stage {
   position: relative;
 }
@@ -283,16 +291,18 @@
   background: linear-gradient(0deg, #031b3380, transparent 35%);
   pointer-events: none;
 }
-.explorer-photo-0 img {
+.explorer-photo-skid-mounted-packages img {
   object-position: 52% center;
 }
-.explorer-photo-1 img {
+.explorer-photo-process-equipment img {
   object-position: 40% center;
+  /* Crop the border and partial caption in the client-supplied photograph. */
+  scale: 1.18;
 }
-.explorer-photo-2 img {
+.explorer-photo-well-testing-units img {
   object-position: 65% center;
 }
-.explorer-photo-3 img {
+.explorer-photo-power-plant-equipment img {
   object-position: 60% center;
 }
 .explorer-visual figcaption {
@@ -453,7 +463,8 @@
 .directory-row:last-child {
   border-bottom: 1px solid #cbd3d8;
 }
-.directory-row summary {
+.directory-row summary,
+.directory-category {
   display: grid;
   grid-template-columns: 50px 1fr auto 25px;
   gap: 25px;
@@ -461,6 +472,12 @@
   padding: 28px 0;
   cursor: pointer;
   list-style: none;
+}
+.directory-category h3 {
+  grid-column: 2 / 4;
+}
+.directory-category:hover h3 {
+  color: #9d761f;
 }
 .directory-row summary::-webkit-details-marker {
   display: none;
@@ -683,9 +700,13 @@
     max-width: 220px;
     font-size: 12px;
   }
-  .directory-row summary {
+  .directory-row summary,
+  .directory-category {
     grid-template-columns: 30px 1fr 22px;
     gap: 18px;
+  }
+  .directory-category h3 {
+    grid-column: auto;
   }
   .directory-count {
     display: none;
@@ -782,7 +803,8 @@
   .directory-intro > p br {
     display: none;
   }
-  .directory-row summary {
+  .directory-row summary,
+  .directory-category {
     gap: 12px;
     padding: 25px 0;
     grid-template-columns: 23px 1fr 20px;

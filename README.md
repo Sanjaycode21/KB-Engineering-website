@@ -15,6 +15,7 @@ Open http://127.0.0.1:3000. Use `npm run build` for a production build, `npm sta
 
 ## Pages and interactions
 
+
 - Home, About, Services, Products, Contact and five product detail pages.
 - Three-slide hero: synchronized images, headings, descriptions and CTAs; crossfades every 4 seconds with previous/next and direct slide selection.
 - Autoplay pauses on keyboard focus, hidden tabs and outside the viewport. Reduced-motion visitors use manual controls.
@@ -33,9 +34,9 @@ Deploy to a Node.js-compatible Next.js host; the inquiry API requires a server. 
 
 Company details come from the supplied client requirements document; product categories come from the user-authored master brief. No certifications, client names, company history, project totals or performance statistics were invented. A personal LinkedIn profile is not presented as a company account.
 
-The logo was extracted unchanged from `word/media/image1.jpeg` in `Website_Client_Requirements (1).docx`.
+The header uses the two client-supplied logos side by side, with only outer blank margins cropped.
 
-Photography is illustrative stock, not K B Engineering facilities or completed work. Unsplash images use the [Unsplash License](https://unsplash.com/license); Pexels images use the [Pexels License](https://www.pexels.com/license/).
+The six `client-*.jpg` images were supplied by the client and appear throughout the homepage and industrial category cards. The client process-equipment image also appears in the Products explorer. The homepage banner uses the three higher-resolution pressure vessel, heat exchanger and piping images. `skid-mounted-packages.jpg` and `sludge-treatment-plant.jpg` are generated representative illustrations for the Products explorer; they do not depict client projects. Other photography is illustrative stock. Unsplash images use the [Unsplash License](https://unsplash.com/license); Pexels images use the [Pexels License](https://www.pexels.com/license/).
 
 | Local file in `public/images/` | Source |
 | --- | --- |

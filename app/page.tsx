@@ -6,8 +6,24 @@ import Motion from "@/components/motion";
 import ServicesMotion from "@/components/services-motion";
 import Hero from "@/components/hero";
 import EngineeringGeometry from "@/components/engineering-geometry";
-import { services } from "@/lib/data";
+import { industrialCategories, services } from "@/lib/data";
 import SectionDivider from "@/components/section-divider";
+
+const homepageServiceImages = [
+  {
+    image: "client-process-equipment",
+    alt: "Industrial process columns, vessels, piping and access platforms",
+  },
+  {
+    image: "client-heat-exchangers",
+    alt: "Shell-and-tube heat exchanger for industrial process applications",
+  },
+  {
+    image: "client-heavy-structures",
+    alt: "Structural steel building frame with columns, beams and bracing",
+  },
+];
+
 export default function Home() {
   return (
     <main id="main" className="home">
@@ -19,10 +35,11 @@ export default function Home() {
           <div className="about-visual" data-reveal>
             <div className="about-image">
               <Image
-                src="/images/welding.jpg"
-                alt="Illustrative metal fabrication work with sparks"
+                src="/images/client-power-plant-duct-systems.jpg"
+                alt="Large industrial ductwork and an exhaust stack at a power plant"
                 fill
                 sizes="(max-width:760px) 100vw, 45vw"
+                style={{ scale: 1.18 }}
               />
             </div>
             <div className="image-tag">IDEAS. ENGINEERED INTO REALITY.</div>
@@ -70,7 +87,7 @@ export default function Home() {
             <p className="eyebrow">OUR SERVICES</p>
             <h2>
               A complete <br />
-              EPF solution.
+              EPC Solution.
             </h2>
             <span className="gold-rule" />
             <p>
@@ -84,6 +101,7 @@ export default function Home() {
           <div className="services-grid">
             {services.map((s, i) => {
               const Icon = [Compass, Layers3, HardHat][i];
+              const image = homepageServiceImages[i];
               return (
                 <div className="service-card-reveal" key={s.name}>
                   <Link
@@ -92,8 +110,8 @@ export default function Home() {
                   >
                     <div className="service-image">
                       <Image
-                        src={`/images/${s.image}.jpg`}
-                        alt={s.imageAlt}
+                        src={`/images/${image.image}.jpg`}
+                        alt={image.alt}
                         fill
                         sizes="(max-width:760px) 90vw, 25vw"
                       />
@@ -175,7 +193,7 @@ export default function Home() {
                 {
                   Icon: Layers3,
                   title: "Procurement with a defined scope",
-                  text: "Material and equipment sourcing forms part of the EPF offering. Share specifications, quantities and supply requirements to frame your procurement needs.",
+                  text: "Material and equipment sourcing forms part of our EPC Solution. Share specifications, quantities and supply requirements to frame your procurement needs.",
                 },
                 {
                   Icon: HardHat,
@@ -209,21 +227,11 @@ export default function Home() {
               </p>
             </div>
             <div className="why-range-links">
-              <Link href="/products/skid-mounted-packages">
-                Skid Mounted Packages <ArrowRight size={15} />
-              </Link>
-              <Link href="/products/process-equipment">
-                Process Equipment <ArrowRight size={15} />
-              </Link>
-              <Link href="/products/well-testing-units">
-                Well Testing Units <ArrowRight size={15} />
-              </Link>
-              <Link href="/products/power-plant-equipment">
-                Power Plant Equipment <ArrowRight size={15} />
-              </Link>
-              <Link href="/products/sludge-treatment-plant">
-                Sludge Treatment Plant <ArrowRight size={15} />
-              </Link>
+              {industrialCategories.map((category) => (
+                <Link key={category.slug} href={category.href}>
+                  {category.name} <ArrowRight size={15} />
+                </Link>
+              ))}
             </div>
           </div>
         </div>

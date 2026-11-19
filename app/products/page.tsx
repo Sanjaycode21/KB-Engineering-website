@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Plus } from "lucide-react";
-import { products } from "@/lib/data";
+import { industrialCategories, products } from "@/lib/data";
 import ProductExplorer from "@/components/product-explorer";
 import ProductsMotion from "@/components/products-motion";
-import { Button } from "@/components/site";
+import { Button, ProductGrid } from "@/components/site";
 import "./products.css";
 
 export const metadata: Metadata = {
   title: "Industrial Equipment & Packages",
   description:
-    "Explore K B Engineering's skid mounted packages, process equipment, well testing units, power plant equipment and sludge treatment plant range.",
+    "Explore K B Engineering's pressure vessels, heat exchangers, piping, process equipment, power plant duct systems, heavy structures and industrial packages.",
 };
 
 export default function Products() {
@@ -41,7 +41,7 @@ export default function Products() {
                 equipment, explore solutions built around complex engineering
                 requirements.
               </p>
-              <a className="collection-discover" href="#product-explorer">
+              <a className="collection-discover" href="#industrial-categories">
                 <span className="collection-discover-icon">
                   <ArrowDown size={18} />
                 </span>{" "}
@@ -59,17 +59,25 @@ export default function Products() {
               />
               <figcaption>
                 <span>INDUSTRIAL EQUIPMENT & SYSTEMS</span>
-                <span>KB / EPF</span>
+                <span>KB / EPC SOLUTION</span>
               </figcaption>
             </figure>
           </div>
           <div className="collection-hero-bottom">
-            <span>FIVE EQUIPMENT GROUPS. ONE CONNECTED EPF OFFERING.</span>
+            <span>ELEVEN PRODUCT CATEGORIES. ONE CONNECTED EPC SOLUTION.</span>
             <a href="#product-directory">
               Already know what you need? <ArrowUpRight size={16} />
             </a>
           </div>
         </div>
+      </section>
+      <section
+        className="industrial-categories container"
+        id="industrial-categories"
+        aria-labelledby="industrial-categories-title"
+      >
+        <h2 id="industrial-categories-title">Industrial equipment & structures</h2>
+        <ProductGrid />
       </section>
       <ProductExplorer />
       <section
@@ -90,6 +98,19 @@ export default function Products() {
             </p>
           </div>
           <div className="directory-list">
+            {industrialCategories.map((category, i) => (
+              <Link
+                className="directory-row directory-category"
+                key={category.slug}
+                href={category.href}
+              >
+                <span className="directory-number">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3>{category.name}</h3>
+                <ArrowUpRight size={20} className="directory-toggle" />
+              </Link>
+            ))}
             {products.map((product, i) => (
               <details
                 className="directory-row"
@@ -98,7 +119,7 @@ export default function Products() {
               >
                 <summary>
                   <span className="directory-number">
-                    {String(i + 1).padStart(2, "0")}
+                    {String(industrialCategories.length + i + 1).padStart(2, "0")}
                   </span>
                   <h3>{product.name}</h3>
                   <span className="directory-count">
@@ -145,7 +166,7 @@ export default function Products() {
           <div>
             <Button href="/contact">Discuss Your Project</Button>
             <Link href="/services" className="collection-services-link">
-              Explore our EPF services <ArrowUpRight size={16} />
+              Explore our EPC Solution <ArrowUpRight size={16} />
             </Link>
           </div>
         </div>
