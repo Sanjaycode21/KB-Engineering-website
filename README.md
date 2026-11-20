@@ -34,7 +34,7 @@ Deploy to a Node.js-compatible Next.js host; the inquiry API requires a server. 
 
 Company details come from the supplied client requirements document; product categories come from the user-authored master brief. No certifications, client names, company history, project totals or performance statistics were invented. A personal LinkedIn profile is not presented as a company account.
 
-The client-supplied logo assets remain in `public/images/`; the current header displays no logo.
+The header displays the two client-supplied logo assets side by side, with only outer blank margins cropped. `logo-wordmark-full.png` keeps the company name and tagline visible in the header.
 
 The six `client-*.jpg` images were supplied by the client and appear throughout the homepage and industrial category cards. The client process-equipment image also appears in the Products explorer. The homepage banner uses the three higher-resolution pressure vessel, heat exchanger and piping images. `skid-mounted-packages.jpg` and `sludge-treatment-plant.jpg` are generated representative illustrations for the Products explorer; they do not depict client projects. Other photography is illustrative stock. Unsplash images use the [Unsplash License](https://unsplash.com/license); Pexels images use the [Pexels License](https://www.pexels.com/license/).
 

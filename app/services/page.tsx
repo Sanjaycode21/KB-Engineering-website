@@ -22,7 +22,7 @@ export default function Services() {
           <div className="container two-column">
             <div className="content-image">
               <Image
-                src={`/images/${s.image}.jpg`}
+                src={`/images/${s.image}`}
                 alt={s.imageAlt}
                 fill
                 sizes="(max-width:800px) 100vw, 50vw"

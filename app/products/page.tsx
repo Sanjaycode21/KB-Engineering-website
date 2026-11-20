@@ -50,12 +50,12 @@ export default function Products() {
             </div>
             <figure className="collection-hero-photo">
               <Image
-                src="/images/hero-process.jpg"
-                alt="Illustrative industrial boiler, cylindrical equipment and connected pipework"
+                src="/images/product-components-hero.png"
+                alt="Illustration of a heat exchanger tube bundle and fabricated pipe components in a workshop"
                 fill
                 priority
                 sizes="(max-width:800px) 90vw, 48vw"
-                style={{ objectFit: "cover", objectPosition: "62% center" }}
+                style={{ objectFit: "cover", objectPosition: "center" }}
               />
               <figcaption>
                 <span>INDUSTRIAL EQUIPMENT & SYSTEMS</span>

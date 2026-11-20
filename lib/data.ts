@@ -129,7 +129,7 @@ export const services = [
     description: "Technical planning and engineering solutions.",
     detail:
       "Bring your process requirements, drawings and specifications. We work with you to define the engineering scope for your industrial equipment.",
-    image: "engineering",
+    image: "engineering.jpg",
     imageAlt: "Technical drawings with a pencil and measurement ruler",
   },
   {
@@ -138,7 +138,7 @@ export const services = [
       "Sourcing materials and equipment for industrial requirements.",
     detail:
       "Material and equipment sourcing aligned with the requirements of your project. Discuss specifications, quantities and procurement scope with our team.",
-    image: "materials",
+    image: "materials.jpg",
     imageAlt: "Stocked metal pipe sections in a warehouse",
   },
   {
@@ -147,7 +147,7 @@ export const services = [
       "Manufacturing and assembling industrial equipment and heavy structures.",
     detail:
       "Fabrication and assembly for industrial equipment and packages, developed around the agreed engineering scope and project requirements.",
-    image: "fabrication",
-    imageAlt: "Welder working on metal with protective mask and gloves",
+    image: "fabrication-service.png",
+    imageAlt: "Welder fabricating a metal vessel in an industrial workshop",
   },
 ];
